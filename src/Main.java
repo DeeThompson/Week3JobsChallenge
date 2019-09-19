@@ -19,21 +19,20 @@ public class Main {
         String enddate = "";
         String jobdescription ="";
 
-        ArrayList<Jobs> date = new ArrayList<>();
+        ArrayList<Jobs> position = new ArrayList<>();
         System.out.println("Please submit your Resume ");
         int counter =1;
 
         while (true ) {
 
-            Jobs position = new Jobs();
+            Jobs date= new Jobs();
             System.out.println ("Please enter your name" + counter);
             name = sc.nextLine();
-            date.setName(Name);
+            date.setName(name);
 
             System.out.println ("Please enter your email");
             email = sc.nextLine();
-            date.setEmail(Email);
-
+            date.setEmail(email);
         }
 
 
