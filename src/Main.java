@@ -7,7 +7,7 @@ import static com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.XmlToken.Name;
 
 
 public class Main {
-    public static void main (String[] args){
+    public static <Job> void main (String[] args){
         Scanner sc = new Scanner (System.in);
         String userInput = "";
 
@@ -15,26 +15,71 @@ public class Main {
         String email ="";
         String company ="";
         String jobtitle ="";
-        String startdate ="";
-        String enddate = "";
+        int startdate = 0;
+        int enddate = 0;
         String jobdescription ="";
 
         ArrayList<Jobs> position = new ArrayList<>();
-        System.out.println("Please submit your Resume ");
+        System.out.println("You will enter information for your resume below ");
         int counter =1;
 
         while (true ) {
 
-            Jobs date= new Jobs();
-            System.out.println ("Please enter your name" + counter);
+            Jobs date = new Jobs();
+            System.out.println("Please enter your name" + counter);
             name = sc.nextLine();
             date.setName(name);
 
-            System.out.println ("Please enter your email");
+            System.out.println("Please enter your email");
             email = sc.nextLine();
             date.setEmail(email);
-        }
 
+            System.out.println("Please enter your Company");
+            company = sc.nextLine();
+            date.setCompany(company);
+
+            System.out.println("Please enter your Job Title");
+            jobtitle = sc.nextLine();
+            date.setJobtitle(jobtitle);
+
+            System.out.println("Please enter your start date ");
+            startdate = sc.nextInt();
+            date.setStartdate(startdate);
+
+            System.out.println("Please enter your end date ");
+            enddate = sc.nextInt();
+            date.setEnddate(enddate);
+
+            System.out.println("Please enter your Job Description ");
+            jobdescription = sc.nextLine();
+            date.setJobdescription(jobdescription);
+
+
+
+            position.add(date);
+                System.out.println ("Do you want to add another Job y/n");
+
+                userInput =sc.nextLine();
+
+                if (userInput.equalsIgnoreCase("n")) {
+                    break;
+
+                }
+
+                counter = counter + 1;
+
+
+        }
+        counter = 1;
+
+        for (Jobs job  : position) {
+            System.out.println("Job" + counter);
+            System.out.println (job.getResume());
+
+            counter = counter + 1;
+
+
+        }
 
 
     }

@@ -5,15 +5,16 @@ public class Jobs {
     private String email;
     private String company;
     private String jobtitle;
-    private String startdate;
-    private String enddate;
+    private int startdate;
+    private int enddate;
     private String jobdescription;
+    private String resume;
 
     public Jobs() {
 
     }
 
-    public Jobs(String name, String email, String company, String jobtitle, String startdate, String enddate, String jobdescription) {
+    public Jobs(String name, String email, String company, String jobtitle, int startdate, int enddate, String jobdescription) {
         this.name = name;
         this.email = email;
         this.company = company;
@@ -54,19 +55,19 @@ public class Jobs {
         this.jobtitle = jobtitle;
     }
 
-    public String getStartdate() {
+    public int getStartdate() {
         return startdate;
     }
 
-    public void setStartdate(String startdate) {
+    public void setStartdate(int startdate) {
         this.startdate = startdate;
     }
 
-    public String getEnddate() {
+    public int getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(String enddate) {
+    public void setEnddate(int enddate) {
         this.enddate = enddate;
     }
 
@@ -82,11 +83,21 @@ public class Jobs {
 
     {
 
-        String Resume = "Name on Resume " + getName() + "\nThis is the email address" + getEmail() + "\n This is the company" + getCompany() + "\n This is the job title" + getJobtitle() + "\n This is the Start Date" + getStartdate() + "\n This is the End Date" + getEnddate() + "\n This is the job description" + getJobdescription();
+        //String resume = "Name on Resume " + getName() + "\nThis is the email address" + getEmail() + "\n This is the company" + getCompany() + "\n This is the job title" + getJobtitle() + "\n This is the Start Date" + getStartdate() + "\n This is the End Date" + getEnddate() + "\n This is the job description" + getJobdescription();
+        //String resume1 = resume;
 
         //"\n(this means next line) Model of car:" + getModel() +
         //"\nYear of car: " + getYear();
         //-note do need parenthesis -this whole part will print
+    }
+
+
+    public String getResume() {
+
+        String resume = "Name on Resume " + getName() + "\nThis is the email address" + getEmail() + "\n This is the company" + getCompany() + "\n This is the job title" + getJobtitle() + "\n This is the Start Date" + getStartdate() + "\n This is the End Date" + getEnddate() + "\n This is the job description" + getJobdescription();
+    return resume;
+
+
     }
 
 
