@@ -94,7 +94,7 @@ public class Jobs {
 
     public String getResume() {
 
-        String resume = "Name on Resume " + getName() + "\nThis is the email address" + getEmail() + "\n This is the company" + getCompany() + "\n This is the job title" + getJobtitle() + "\n This is the Start Date" + getStartdate() + "\n This is the End Date" + getEnddate() + "\n This is the job description" + getJobdescription();
+        String resume = "Name on Resume: " + getName() + "\nThis is the email address:" + getEmail() + "\n This is the company:" + getCompany() + "\n This is the job title:" + getJobtitle() + "\n This is the Start Date:" + getStartdate() + "\n This is the End Date:" + getEnddate() + "\n This is the job description:" + getJobdescription();
     return resume;
 
 

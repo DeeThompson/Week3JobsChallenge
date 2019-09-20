@@ -42,13 +42,15 @@ public class Main {
             jobtitle = sc.nextLine();
             date.setJobtitle(jobtitle);
 
-            System.out.println("Please enter your start date ");
+            System.out.println("Please enter the year of your start date ");
             startdate = sc.nextInt();
             date.setStartdate(startdate);
 
-            System.out.println("Please enter your end date ");
+            System.out.println("Please enter the year of your  end date ");
             enddate = sc.nextInt();
             date.setEnddate(enddate);
+
+            sc.nextLine();
 
             System.out.println("Please enter your Job Description ");
             jobdescription = sc.nextLine();
@@ -57,8 +59,7 @@ public class Main {
 
 
             position.add(date);
-                System.out.println ("Do you want to add another Job y/n");
-
+            System.out.println ("Do you want to add another Job y/n");
                 userInput =sc.nextLine();
 
                 if (userInput.equalsIgnoreCase("n")) {
